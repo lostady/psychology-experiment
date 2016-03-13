@@ -1,0 +1,9 @@
+th, td { text-align: left !important;}
+  td.hidden { color:black; background-color: black;}
+  label.radio { text-align: left}
+  tr > td { width: 22%;}
+  tr > td:first-child { width: 12% !important; font-size: 12px;}
+.container {
+margin-top:30px;
+margin-bottom:30px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css"></link>
+  <link rel="stylesheet" href="style.css"></link>
+  <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="hero-unit">
+    <p>
+      안녕하십니까?<br /><br />
+      바쁜 와중에도 본 연구에 참여해 주셔서 대단히 감사합니다.<br /><br />
+      본 연구는 소비자의 구매 경향성을 알아보기 위한 것으로, 여러분이 응답해 주신 자료는 소비자 행동을 이해하는데 많은 도움을 줄 것입니다.
+      여러분이 답하시는 문항에는 정답이 없으며, 여러분의 평소 생각이나 행동을 솔직하게 답하시면 됩니다.<br /><br />
+      여러분의 응답은 순수한 연구의 목적으로만 사용될 것이며, 여러분의 의견은 익명으로 처리됩니다.<br />
+      귀한 시간을 내주셔서 감사합니다.
+    </p>
+    <p class="text-right">
+     이화여자대학교 일반대학원 심리학과<br />
+     소비자 및 광고심리 전공 박사과정 김하예
+    </p>
+    <div>
+      <form class="form-horizontal">
+        <div class="control-group">
+          <label class="control-label">학번</label>
+          <div class="controls">
+            <input type="text" name="student_id"></input>
+            <a id="next" href="https://dl.dropbox.com/u/18023797/tutorial.html" class="btn btn-info">참여하기</a>
+            <script>
+              $("a#next").click(function() {
+                var inputStudentId = $("input[name='student_id']");
+                if (inputStudentId == undefined || !inputStudentId.val()) {
+                  alert("학번을 입력해 주세요.");
+                  return false;
+                }
+                var next_url = $(this).attr("href");
+                next_url += "?student_id=" + encodeURIComponent(inputStudentId.val());
+                $(this).attr("href", next_url);
+                return true;
+              });
+            </script>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>
